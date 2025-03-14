@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.johnson</groupId>
 	<artifactId>portfolio</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>Portfolio</name>
 	<description>Portfolio for Maurice Johnson</description>

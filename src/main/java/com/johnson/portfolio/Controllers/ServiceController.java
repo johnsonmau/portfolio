@@ -20,7 +20,6 @@ public class ServiceController {
     @Autowired
     private EmailServiceImpl emailServiceImpl;
 
-    @Value("${spring.mail.username}")
     private String emailTo;
 
     @PostMapping(value = "/v1/contact", consumes = "application/json", produces = "application/json")

@@ -1,12 +1,9 @@
 package com.johnson.portfolio.Models;
 
-import com.sun.istack.internal.NotNull;
-
 public class Contact {
 
     private String firstName;
 
-    @NotNull
     private String lastName;
 
     private String email;
