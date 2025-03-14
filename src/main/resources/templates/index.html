@@ -26,134 +26,241 @@
 
   <!-- Template Main CSS File -->
   <link th:href="@{/css/style.css}" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- ======= Mobile nav toggle button ======= -->
-<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-<!-- ======= Header ======= -->
-<header id="header">
-  <div class="d-flex flex-column">
-    <div class="profile">
-      <img th:src="@{/img/oval_photo.jpeg}" alt="" class="img-fluid rounded-circle">
-      <h1 class="text-light"><a href="index.html">Maurice Johnson</a></h1>
-      <div class="social-links mt-3 text-center">
-        <a th:href="@{mailto:mbjjr95@gmail.com}" class="gmail" target="_blank"><i class="bi bi-google"></i></a>
-        <a th:href="@{https://www.linkedin.com/in/mauricej95/}" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img th:src="@{/img/oval_photo.jpeg}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Maurice Johnson</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a th:href="@{mailto:mbjjr95@gmail.com}" class="gmail" target="_blank"><i class="bi bi-google"></i></a>
+          <a th:href="@{https://www.linkedin.com/in/mauricej95/}" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
       </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a id="aboutButton" href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Maurice Johnson</h1>
+      <p><span class="typed" data-typed-items="Developer, Software Engineer, Freelancer"></span></p>
     </div>
 
-    <nav id="navbar" class="nav-menu navbar">
-      <ul>
-        <li><a th:href="@{#hero}" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a id="aboutButton" th:href="@{#about}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a th:href="@{#contact}" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </section><!-- End Hero -->
 
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-  <div class="hero-container" data-aos="fade-in">
-    <h1>Maurice Johnson</h1>
-    <p><span class="typed" data-typed-items="Developer, Software Engineer, Freelancer"></span></p>
-  </div>
-</section>
 
-<main id="main">
+  <main id="main">
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>About</h2>
-        <p>Contact me for general Web Development freelance work or intermediate Java tutoring...</p>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Contact me for general Web Development freelance work or intermediate Java tutoring. Available starting at
+            <strong>$50</strong> an hour. Strong technical skills with knowledge in Java, Javascript, HTML, CSS, and more.
+            Able to quickly create full-stack applications, user interfaces, or RESTful APIs using Spring Boot.
+          I also have a few Java tutorials currently on YouTube. I plan to post more in the future. You can check them out
+            on my channel <strong><a href="https://www.youtube.com/channel/UC0kEXeqojM8RqUCejco4_jg">HERE</a></strong>.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section><!-- End About Section -->
 
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Fill out the below form to get in contact with me...</p>
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Below you can find some of the technologies I excel in the most:</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="progress">
+              <span class="skill">Java <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">REST Services <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Python <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+    </section><!-- End Skills Section -->
 
-      <div class="row" data-aos="fade-in">
-        <div class="col-lg-5 d-flex align-items-stretch">
-          <div class="info">
-            <div class="address">
-              <i class="bi bi-geo-alt"></i>
-              <h4>Location:</h4>
-              <p>Connecticut, USA</p>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Fill out the below form to get in contact with me. In the <strong>Message</strong> text box, be sure to include the service you need me to provide, along with any other questions. I will respond with an email as soon as possible.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Connecticut, USA</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>mbjjr95@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1203-873-8099</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47614.497712682314!2d-72.71510638383808!3d41.765682133057645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e65311f21151a5%3A0xcc8e4aa8e97d5999!2sHartford%2C%20CT!5e0!3m2!1sen!2sus!4v1620849680013!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
-            <div class="email">
-              <i class="bi bi-envelope"></i>
-              <h4>Email:</h4>
-              <p>mbjjr95@gmail.com</p>
-            </div>
-            <div class="phone">
-              <i class="bi bi-phone"></i>
-              <h4>Call:</h4>
-              <p>+1203-873-8099</p>
-            </div>
-            <iframe th:src="@{https://www.google.com/maps/embed?...}" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form role="form" class="email-form" method="post">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label id="fName" for="firstName" data-toggle="tooltip" title="Hooray!" data-severity="danger">First Name</label>
+                  <input type="text" name="firstName" class="form-control" id="firstName" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" name="lastName" id="lastName" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="subject">Message Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="text-center"><button id="sendContactButton" type="submit">Send Message</button></div>
+            </form>
           </div>
         </div>
 
-        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form role="form" class="email-form" method="post">
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label for="firstName">First Name</label>
-                <input type="text" name="firstName" class="form-control" id="firstName" required>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <div class="modal fade" id="errorModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-body" align="center">
+                  <p id="errorModalBody"></p>
               </div>
-              <div class="form-group col-md-6">
-                <label for="lastName">Last Name</label>
-                <input type="text" class="form-control" name="lastName" id="lastName" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" class="form-control" name="message" rows="10" required></textarea>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MJ</span></strong>
       </div>
     </div>
-  </section>
+  </footer><!-- End  Footer -->
 
-</main>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<footer id="footer">
-  <div class="container">
-    <div class="copyright">
-      &copy; Copyright <strong><span>MJ</span></strong>
-    </div>
-  </div>
-</footer>
+  <!-- Vendor JS Files -->
+  <script th:src="@{/vendor/aos/aos.js}"></script>
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
+  <script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{/vendor/purecounter/purecounter.js}"></script>
+  <script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script th:src="@{/vendor/typed.js/typed.min.js}"></script>
+  <script th:src="@{/vendor/waypoints/noframework.waypoints.js}"></script>
+  <script th:src="@{/vendor/jquery/jquery-3.6.0.js}"></script>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Vendor JS Files -->
-<script th:src="@{/vendor/aos/aos.js}"></script>
-<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-<script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
-<script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
-<script th:src="@{/vendor/purecounter/purecounter.js}"></script>
-<script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
-<script th:src="@{/vendor/typed.js/typed.min.js}"></script>
-<script th:src="@{/vendor/waypoints/noframework.waypoints.js}"></script>
-<script th:src="@{/vendor/jquery/jquery-3.6.0.js}"></script>
-
-<!-- Template Main JS File -->
-<script th:src="@{/js/index.js}"></script>
-<script th:src="@{/js/main.js}"></script>
+  <!-- Template Main JS File -->
+  <script th:src="@{/js/index.js}"></script>
+  <script th:src="@{/js/main.js}"></script>
 
 </body>
+
 </html>
