@@ -87,8 +87,10 @@ function customSubmit(event) {
     sendContactButton.hide();
     spinner.show();  // Use jQuery's hide() method to hide the spinner
 
+    var contextPath = window.location.pathname.split('/')[1];
+
     $.ajax({
-        url: "/v1/contact",
+        url: contextPath+"/v1/contact",
         type: "POST",
         data: JSON.stringify(contactBody),
         contentType: "application/json; charset=utf-8",
