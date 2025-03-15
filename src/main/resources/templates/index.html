@@ -25,6 +25,21 @@
   <!-- Template Main CSS File -->
   <link th:href="@{/css/style.css}" rel="stylesheet">
 
+  <!-- Vendor JS Files -->
+  <script th:src="@{/vendor/aos/aos.js}"></script>
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
+  <script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{/vendor/purecounter/purecounter.js}"></script>
+  <script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script th:src="@{/vendor/typed.js/typed.min.js}"></script>
+  <script th:src="@{/vendor/waypoints/noframework.waypoints.js}"></script>
+  <script th:src="@{/vendor/jquery/jquery-3.6.0.js}"></script>
+
+  <!-- Template Main JS File -->
+  <script th:src="@{/js/index.js}"></script>
+  <script th:src="@{/js/main.js}"></script>
+
 </head>
 
 <body>
@@ -305,7 +320,7 @@
                       <label for="message">Message</label>
                       <textarea id="message" class="form-control" name="message" rows="10" required></textarea>
                     </div>
-                    <div class="text-center"><button id="sendContactButton" type="submit">Send Message</button></div>
+                    <div class="text-center"><button onclick="customSubmit(e)" id="sendContactButton" type="submit">Send Message</button></div>
                   </form>
                 </div>
               </div>
@@ -340,20 +355,26 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script th:src="@{/vendor/aos/aos.js}"></script>
-  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-  <script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
-  <script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
-  <script th:src="@{/vendor/purecounter/purecounter.js}"></script>
-  <script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
-  <script th:src="@{/vendor/typed.js/typed.min.js}"></script>
-  <script th:src="@{/vendor/waypoints/noframework.waypoints.js}"></script>
-  <script th:src="@{/vendor/jquery/jquery-3.6.0.js}"></script>
+  <!-- Modal Structure -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Message sent successfully! Be on the lookout for a response soon.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Template Main JS File -->
-  <script th:src="@{/js/index.js}"></script>
-  <script th:src="@{/js/main.js}"></script>
 
 </body>
 

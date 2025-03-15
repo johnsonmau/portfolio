@@ -20,6 +20,7 @@ public class ServiceController {
     @Autowired
     private EmailServiceImpl emailServiceImpl;
 
+    @Value("${sendToEmail}")
     private String emailTo;
 
     @PostMapping(value = "/v1/contact", consumes = "application/json", produces = "application/json")
@@ -34,7 +35,7 @@ public class ServiceController {
                 return new ResponseEntity<>(new ContactResponse(HttpStatus.BAD_REQUEST.value(),
                         HttpStatus.BAD_REQUEST.getReasonPhrase(), "Validation Error", validationErrors), HttpStatus.BAD_REQUEST);            }
 
-            emailServiceImpl.sendSimpleMessage(emailTo, "MBJJR CONTACT FROM: " +
+            emailServiceImpl.sendSimpleMessage(emailTo, "CONSULTATION CONTACT FROM: " +
                     contact.getFirstName() + " " + contact.getLastName() + " | " +
                     contact.getEmail(), contact.getMessageSubject());
 
