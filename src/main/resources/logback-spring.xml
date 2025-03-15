@@ -1,24 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <!-- Rolling File Appender configuration -->
-    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/${spring.application.name}-springboot.log</file>  <!-- Application name included in the log file -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <!-- File name pattern with application name, timestamp, and index -->
-            <fileNamePattern>logs/${spring.application.name}-springboot.log</fileNamePattern> <!-- Use app name here -->
-            <maxFileSize>1GB</maxFileSize> <!-- Limit file size to 1GB -->
-            <maxHistory>1</maxHistory> <!-- Keep only the latest log file -->
-            <totalSizeCap>1GB</totalSizeCap> <!-- Total log size capped at 1GB -->
-        </rollingPolicy>
-
+    <!-- Console Appender: Logs to the console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
         </encoder>
     </appender>
 
+    <!-- Rolling File Appender configuration for INFO level logs -->
+    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/portfolio-app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/portfolio-app-%d{yyyy-MM-dd}-%i.log</fileNamePattern> <!-- Include DateToken and index -->
+            <maxFileSize>1GB</maxFileSize> <!-- Max size per log file -->
+            <maxHistory>30</maxHistory> <!-- Keep logs for 30 days -->
+            <totalSizeCap>30GB</totalSizeCap> <!-- Total size cap for logs -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - INFO - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Rolling File Appender configuration for ERROR level logs -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/portfolio-app-error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/portfolio-app-error-%d{yyyy-MM-dd}-%i.log</fileNamePattern> <!-- Include DateToken and index -->
+            <maxFileSize>1GB</maxFileSize> <!-- Max size per log file -->
+            <maxHistory>30</maxHistory> <!-- Keep logs for 30 days -->
+            <totalSizeCap>30GB</totalSizeCap> <!-- Total size cap for logs -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - ERROR - %msg%n</pattern>
+        </encoder>
+    </appender>
+
     <!-- Root logger configuration -->
     <root level="INFO">
-        <appender-ref ref="ROLLING"/>
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="ERROR_FILE" />
     </root>
+
+    <!-- Logger configuration for specific packages -->
+    <logger name="com.johnson.portfolio" level="DEBUG">
+        <appender-ref ref="INFO_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </logger>
 
 </configuration>
