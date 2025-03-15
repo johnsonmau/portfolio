@@ -4,6 +4,7 @@ import com.johnson.portfolio.Models.Contact;
 import com.johnson.portfolio.Models.ContactResponse;
 import com.johnson.portfolio.Services.EmailServiceImpl;
 import com.johnson.portfolio.Util.Validation;
+import com.johnson.portfolio.annotation.RateLimit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -20,10 +21,11 @@ public class ServiceController {
     @Autowired
     private EmailServiceImpl emailServiceImpl;
 
-    @Value("${sendToEmail}")
+    @Value("${spring.mail.username}")
     private String emailTo;
 
     @PostMapping(value = "/v1/contact", consumes = "application/json", produces = "application/json")
+    @RateLimit
     public ResponseEntity<ContactResponse> sendEmail(@RequestBody Contact contact) {
 
         try {
@@ -33,11 +35,10 @@ public class ServiceController {
             if (validationErrors.size() > 0){
 
                 return new ResponseEntity<>(new ContactResponse(HttpStatus.BAD_REQUEST.value(),
-                        HttpStatus.BAD_REQUEST.getReasonPhrase(), "Validation Error", validationErrors), HttpStatus.BAD_REQUEST);            }
+                        HttpStatus.BAD_REQUEST.getReasonPhrase(), "Validation Error", validationErrors), HttpStatus.BAD_REQUEST);
+            }
 
-            emailServiceImpl.sendSimpleMessage(emailTo, "CONSULTATION CONTACT FROM: " +
-                    contact.getFirstName() + " " + contact.getLastName() + " | " +
-                    contact.getEmail(), contact.getMessageSubject());
+            emailServiceImpl.sendSimpleMessage(emailTo, contact);
 
             return new ResponseEntity<>(new ContactResponse(HttpStatus.OK.value(),
                     HttpStatus.OK.getReasonPhrase(), "Email sent successfully.", null), HttpStatus.OK);
