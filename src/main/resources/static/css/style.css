@@ -287,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
     line-height: 36px;
   }
-  #hero h2 {
+  #hero h2, h4 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
@@ -310,7 +310,7 @@ section {
   padding-bottom: 30px;
 }
 
-.section-title h2 {
+.section-title h2, h4 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -319,7 +319,7 @@ section {
   color: #173b6c;
 }
 
-.section-title h2::after {
+.section-title h2::after, h4 {
   content: '';
   position: absolute;
   display: block;
@@ -349,7 +349,6 @@ section {
 }
 
 .about .content ul li {
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
@@ -711,7 +710,7 @@ section {
   background: #f9f9f9;
 }
 
-.breadcrumbs h2 {
+.breadcrumbs h2, h4 {
   font-size: 26px;
   font-weight: 300;
 }
