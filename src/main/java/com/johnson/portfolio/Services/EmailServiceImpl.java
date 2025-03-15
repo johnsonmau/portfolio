@@ -24,8 +24,7 @@ public class EmailServiceImpl implements EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    @Value("${spring.mail.username}")
-    private String fromEmail;
+    private String fromEmail = System.getenv("portfolioMailEmail");
 
     public void sendSimpleMessage(String to, Contact contact) {
         String fullName = contact.getFirstName() + " " + contact.getLastName();
@@ -35,6 +34,7 @@ public class EmailServiceImpl implements EmailService {
                 "<h2>New Consultation Request</h2>" +
                 "<p><strong>Full Name:</strong> " + fullName + "</p>" +
                 "<p><strong>Email:</strong> " + contact.getEmail() + "</p>" +
+                "<p><strong>Subject:</strong> " + contact.getMessageSubject() + "</p>" +
                 "<p><strong>Message:</strong></p>" +
                 "<p>" + contact.getMessageBody() + "</p>" +
                 "</body>" +
