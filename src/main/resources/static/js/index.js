@@ -10,6 +10,10 @@ function isValidEmail(email) {
     return regex.test(email);
 }
 
+function getContextPath() {
+    return window.location.pathname.substring(0, window.location.pathname.indexOf("/",2));
+}
+
 function customSubmit(event) {
     event.preventDefault();  // This stops the form submission/redirect
 
@@ -87,10 +91,8 @@ function customSubmit(event) {
     sendContactButton.hide();
     spinner.show();  // Use jQuery's hide() method to hide the spinner
 
-    var contextPath = window.location.pathname.split('/')[1];
-
     $.ajax({
-        url: contextPath+"/v1/contact",
+        url: getContextPath()+"/v1/contact",
         type: "POST",
         data: JSON.stringify(contactBody),
         contentType: "application/json; charset=utf-8",
