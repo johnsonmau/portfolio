@@ -1,0 +1,24 @@
+<configuration>
+
+    <!-- Rolling File Appender configuration -->
+    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/${spring.application.name}-springboot.log</file>  <!-- Application name included in the log file -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- File name pattern with application name, timestamp, and index -->
+            <fileNamePattern>logs/${spring.application.name}-springboot.log</fileNamePattern> <!-- Use app name here -->
+            <maxFileSize>1GB</maxFileSize> <!-- Limit file size to 1GB -->
+            <maxHistory>1</maxHistory> <!-- Keep only the latest log file -->
+            <totalSizeCap>1GB</totalSizeCap> <!-- Total log size capped at 1GB -->
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root logger configuration -->
+    <root level="INFO">
+        <appender-ref ref="ROLLING"/>
+    </root>
+
+</configuration>
