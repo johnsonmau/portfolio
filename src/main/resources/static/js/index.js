@@ -109,7 +109,7 @@ function customSubmit(event) {
             statusCd = errorData.responseJSON.statusCd;
 
             if (statusCd == 429){
-                alert("Relax. Too many requests. Please try again later.")
+                alert("Too many requests. Please try again later.")
             } else {
                 alert("Something went wrong. Please try again.")
             }
