@@ -23,6 +23,7 @@ public class MailConfig {
         System.out.println("**********");
         System.out.println(System.getenv("portfolioMailEmail"));
         System.out.println(System.getenv("portfolioMailPassword"));
+        System.out.println(System.getenv("portfolioMailPassword").length());
         System.out.println("**********");
 
         Properties properties = mailSender.getJavaMailProperties();
