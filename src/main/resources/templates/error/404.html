@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>codebyMJ - 404</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link th:href="@{/img/favicon.ico}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link th:href="@{/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+  <link th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+  <!-- Vendor JS Files -->
+  <script th:src="@{/vendor/aos/aos.js}"></script>
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/vendor/glightbox/js/glightbox.min.js}"></script>
+  <script th:src="@{/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{/vendor/purecounter/purecounter.js}"></script>
+  <script th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script th:src="@{/vendor/typed.js/typed.min.js}"></script>
+  <script th:src="@{/vendor/waypoints/noframework.waypoints.js}"></script>
+  <script th:src="@{/vendor/jquery/jquery-3.6.0.js}"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img th:src="@{/img/oval_photo.jpeg}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light">Maurice Johnson</h1>
+        <div class="social-links mt-3 text-center">
+          <a th:href="@{mailto:mbjjr95@gmail.com}" class="gmail" target="_blank"><i class="bi bi-google"></i></a>
+          <a th:href="@{https://www.linkedin.com/in/mauricej95/}" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a th:href="@{https://github.com/johnsonmau}" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+          <a th:href="@{https://www.youtube.com/channel/UC0kEXeqojM8RqUCejco4_jg}" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a th:href="@{/}" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a id="aboutButton" th:href="@{/#about}" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a th:href="@{/#contact}" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>404</h1>
+      <p><span>Cannot find this page.</span></p>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>codebyMJ.com</span></strong>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Modal Structure -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Message sent successfully! Be on the lookout for a response soon.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Template Main JS File -->
+  <script th:src="@{/js/index.js}"></script>
+  <script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>
