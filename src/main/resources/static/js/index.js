@@ -113,8 +113,6 @@ function customSubmit(event) {
             } else {
                 alert("Something went wrong. Please try again.")
             }
-            console.log(errorData);
-
         },
         complete: function() {
 

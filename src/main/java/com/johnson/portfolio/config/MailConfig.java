@@ -20,12 +20,6 @@ public class MailConfig {
         mailSender.setUsername(System.getenv("portfolioMailEmail"));
         mailSender.setPassword(System.getenv("portfolioMailPassword"));
 
-        System.out.println("**********");
-        System.out.println(System.getenv("portfolioMailEmail"));
-        System.out.println(System.getenv("portfolioMailPassword"));
-        System.out.println(System.getenv("portfolioMailPassword").length());
-        System.out.println("**********");
-
         Properties properties = mailSender.getJavaMailProperties();
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
