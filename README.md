@@ -1,3 +1,1 @@
-# Portfolio
-
-This is a personal portfolio application for myself. Created using, Spring Boot, Thymeleaf, Bootstrap, and jQuery.
+This repository powers codebyMJ, where I offer tutoring, freelance, or any technical related services.
