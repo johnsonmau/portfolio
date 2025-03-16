@@ -33,7 +33,7 @@ public class RateLimitAspect {
             throw new IllegalStateException("No current HTTP request found.");
         }
 
-        String clientIp = request.getRemoteAddr();
+        String clientIp = request.getHeader("X-Forwarded-For");
         logger.info("Rate limit check for IP: {}", clientIp);
 
         RateLimitInfo rateLimitInfo = ipRequestMap.computeIfAbsent(clientIp, ip -> new RateLimitInfo());
