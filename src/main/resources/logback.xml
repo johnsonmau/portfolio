@@ -28,9 +28,4 @@
         <appender-ref ref="INFO_FILE" />
     </root>
 
-    <!-- Logger configuration for specific packages -->
-    <logger name="com.johnson.portfolio" level="INFO">
-        <appender-ref ref="INFO_FILE"/>
-    </logger>
-
 </configuration>
