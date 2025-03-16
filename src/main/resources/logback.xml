@@ -22,20 +22,6 @@
         </encoder>
     </appender>
 
-    <!-- Rolling File Appender configuration for ERROR level logs -->
-    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/portfolio-app-error.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>logs/portfolio-app-error-%d{yyyy-MM-dd}-%i.log</fileNamePattern> <!-- Include DateToken and index -->
-            <maxFileSize>1GB</maxFileSize> <!-- Max size per log file -->
-            <maxHistory>30</maxHistory> <!-- Keep logs for 30 days -->
-            <totalSizeCap>30GB</totalSizeCap> <!-- Total size cap for logs -->
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} - ERROR - %msg%n</pattern>
-        </encoder>
-    </appender>
-
     <!-- Root logger configuration -->
     <root level="INFO">
         <appender-ref ref="CONSOLE" />
