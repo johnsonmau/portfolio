@@ -34,6 +34,11 @@ public class RateLimitAspect {
         }
 
         String clientIp = request.getHeader("X-Forwarded-For");
+
+        if (clientIp == null){
+            clientIp = request.getRemoteAddr();
+        }
+
         logger.info("Rate limit check for IP: {}", clientIp);
 
         RateLimitInfo rateLimitInfo = ipRequestMap.computeIfAbsent(clientIp, ip -> new RateLimitInfo());
