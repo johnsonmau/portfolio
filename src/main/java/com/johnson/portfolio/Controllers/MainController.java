@@ -19,9 +19,15 @@ public class MainController {
         if (clientIp == null){
             clientIp = request.getRemoteAddr();
         }
+
         logger.info("user [{}] entered homepage",clientIp);
 
         return "index";
+    }
+
+    @GetMapping("/privacy")
+    public String getPrivacyPolicy(HttpServletRequest request){
+        return "privacy";
     }
 
 }
