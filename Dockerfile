@@ -8,7 +8,7 @@ WORKDIR /usr/local/tomcat/webapps/
 COPY target/home.war ./ROOT.war
 
 # Expose port 8084
-EXPOSE 8084
+EXPOSE 1000
 
 # Start Tomcat
 CMD ["catalina.sh", "run"]
